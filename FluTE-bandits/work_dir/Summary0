@@ -1,0 +1,63 @@
+FluTE version: 1.15
+Label: l0
+Population: /home/fiens/SCHOOL/learning_dynamics_influenza_bandits/FluTE-bandits/data/la/la
+Nodes used: Single processor version
+beta: 0.224598
+R0: 1.3
+Random number generator seed: 10
+Tracts: 2049
+Communities: 5597
+Families: 4369006
+People: 11092306
+Essential worker fraction: 0
+Travel allowed: 0
+School opening days: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+Seeded 10 infected people
+Seeded (n/10000) at airports: 0
+Seeded once
+Pre-existing immunity level: 1
+Pre-existing immunity fraction by age: 0,0,0,0,0,
+Baseline VES by age: 0,0,0,0,0,
+Prevaccination strategy: prevaccination
+Reactive vaccination strategy: none
+Vaccine priorities : 0,0,0,0,0,0,0,0,1,2,3,4,5,
+Response threshhold: 0
+Response delay: 1
+Ascertainment delay: 1
+Ascertainment fraction: 0.8
+Reactive strategies deployed on day: 4
+School closure policy: none
+School closure days: 0
+Isolation: 0
+Quarantine: 0
+Liberal leave: 0
+Antiviral policy: none
+Vaccination fraction: 1
+Vaccines initially available: 100,
+Vaccines deliverable per day: 4294967295
+Antivirals available: 4294967295
+Antivirals deliverable per day: 4294967295
+Vaccines used: 1698,
+Antivirals used: 0
+VEs 0: 0.5
+VEi 0: 0.5
+VEp 0: 0.67
+vaccine 0 doses/person: 1
+vaccine 0 restrictions (infants, pre-school age children, school age children, young adults, older adults, elderly, pregnant): 1,0,0,0,0,0,0
+vaccine 0 efficacy buildup: 0 0.001 0.005 0.015 0.033 0.061 0.1 0.152 0.218 0.301 0.401 0.519 0.658 0.818 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+Relative vaccine efficacy by age: 1,1,1,1,1,
+Needs boost by age and school: 0,0,0,0,0,0,0,0,
+AVEs: 0.3
+AVEp: 0.6
+AVEi: 0.62
+Cumulative vaccines used (daily) 0: 1698,1698,1698,1698,1698,1698,1698,1698,1698,1698,
+Number symptomatic (daily): 0,0,2,6,9,12,7,7,10,7,
+Cumulative symptomatic (daily): 0,0,2,6,9,12,15,16,19,20,
+Total symptomatic attack rates by age: 2.75718e-06,2.03388e-06,1.41572e-06,1.91829e-06,7.79498e-07,
+Total symptomatic attack rate: 1.80305e-06
+Total symptomatic individuals by age: 2,5,2,10,1,
+Total symptomatic unvaccinated individuals by age: 2,5,2,10,1,
+Total symptomatic vaccinated individuals by age (vaccine 0): 0,0,0,0,0,
+Total unvaccinated individuals by age: 725289,2457956,1412508,5212175,1282680,
+Total vaccinated individuals by age (vaccine 0): 91,401,200,809,197,
+Total individuals by age: 725380,2458357,1412708,5212984,1282877,
