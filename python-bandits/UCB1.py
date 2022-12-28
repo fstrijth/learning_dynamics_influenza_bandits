@@ -14,7 +14,7 @@ def upper_confidence_bound(avg:float,n_i:int,n:int,c:float):
 
 class UCB1_Agent():
     """Class that implements the UCB1 bandit with parameter c"""
-    def __init__(self,nbr_actions:int,c:float):
+    def __init__(self,nbr_actions:int,c:float=2):
         self.c = c
         self.total = 0 #total number of actions done so far
         self.nbr_actions = nbr_actions
