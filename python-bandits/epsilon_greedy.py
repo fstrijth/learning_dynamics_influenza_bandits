@@ -1,10 +1,10 @@
 import numpy as np
-from random import randint
+from random import uniform, randint
 
 class Epsilon_Greedy_Agent():
     """Class that implements the epsilon-greedy bandit, with nbr_actions arms and constant epsilon"""
     def __init__(self,nbr_actions:int,epsilon_max:int,
-                 epsilon_decay:float=0,epsilon_min:float=0):
+                 epsilon_decay:float=1,epsilon_min:float=0):
         self.epsilon = epsilon_max
         self.epsilon_max = epsilon_max
         self.epsilon_min = epsilon_min
@@ -19,7 +19,7 @@ class Epsilon_Greedy_Agent():
         """During training, explore with probability self.epsilon and exploit otherwise. During testing,
         use the greedy action."""
         if training:
-            prob = randint(0,1)
+            prob = uniform(0,1)
             if prob < self.epsilon:
                 return randint(0,self.nbr_actions-1)
             else:
