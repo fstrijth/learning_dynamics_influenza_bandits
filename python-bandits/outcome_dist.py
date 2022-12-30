@@ -28,9 +28,17 @@ strategies = ["1,0,0,0,0","0,1,0,0,0","0,0,1,0,0","0,0,0,1,0","0,0,0,0,1","1,1,0
               "1,0,1,1,0","1,1,0,0,1","1,1,0,1,0","1,1,1,0,0","0,1,1,1,1","1,0,1,1,1","1,1,0,1,1",
               "1,1,1,0,1","1,1,1,1,0","1,1,1,1,1","0,0,0,0,0"]
 saving_folder = "par1"
-num_samples = 500
+num_samples = 100
 outcome_distributions = []
 for strat in strategies:
     print(strat)
     outcome_distributions.append(distribution(r0,quarantine,strat,saving_folder,num_samples=num_samples))
 strategies_violin_plots(range(len(strategies)),outcome_distributions)
+
+#TODO: environment class like the normalgame that samples from the outcome distribution
+
+#TODO: train epsilon greedy with epsilon value from paper
+
+#TODO: train UCB with c = 2
+
+#TODO: finetune boltzmann with a big enough range of temperatures

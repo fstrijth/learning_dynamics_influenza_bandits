@@ -8,6 +8,8 @@ from numpy import zeros
 from numpy.random import normal
 from random import uniform
 
+#This code tests our agents and plotting function in a simpler normal game environment
+
 class NormalGame:
     """
     Normal Game environment.
