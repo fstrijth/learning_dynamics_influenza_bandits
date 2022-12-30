@@ -9,11 +9,12 @@ seed ${seed}
 R0 ${R0}
 runlength ${run_length}
 datafile ${data_file}
+quarantine ${quarantine}
 
 #parameters further down the script:
 # - population_size
 # - vaccine_priorities:
-#       comma-separated set of identifiers 
+#       comma-separated set of identifiers
 #       (preschool, school, young-adults, older-adults, elderly)
 
 seedinfected 10
@@ -22,14 +23,14 @@ seedinfecteddaily 0
 #People ARE vaccinated prior to the epidemic.
 prestrategy prevaccinate
 #There is no reactive strategy
-reactivestrategy none 
+reactivestrategy none
 
 vaccinationfraction 1
-vaccinedoses 0 ${doses} 
+vaccinedoses 0 ${doses}
 
 #Vaccine definition
 #vaccine_id VE_S VE_I VE_P "6 age groups"
-#This definition is based on [1], 
+#This definition is based on [1],
 #but only the age group <6 months is excluded in this setup.
 #VE_S,VE_I: CDC overview
 #VE_P [1]
@@ -37,12 +38,12 @@ vaccinedata 0 0.5 0.5 0.67 1 0 0 0 0 0 0
 
 #Vector of 13 priorities,
 #the 5 last entries encompass age-specific priorities:
-#all preschoolers, all school-age children, all young adults, 
+#all preschoolers, all school-age children, all young adults,
 #all older adults, all elderly.
 #Priorities are determined numerically:
-#a value of 1 indicates highest priority, 2 is the next-highest priority, etc. 
+#a value of 1 indicates highest priority, 2 is the next-highest priority, etc.
 #0 indicates that this category is not prioritized to get vaccine.
-#In this script, we are interested in targeting a combination of these 
+#In this script, we are interested in targeting a combination of these
 #age groups to prioritize.
 #These can be controlled by passing a comma separated vector of numerals.
 <%
