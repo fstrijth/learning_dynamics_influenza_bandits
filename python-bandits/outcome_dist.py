@@ -13,6 +13,8 @@ def distribution(r0:str,quarantine:str,vaccine_strategy:str,saving_folder:str,
     if exists("../FluTE-bandits/" + saving_folder + "/" + strat_name + "/outcome.txt"):
         with open("../FluTE-bandits/" + saving_folder + "/" + strat_name + "/outcome.txt", "r") as f:
             for line in f:
+                if total_samples == num_samples:
+                    break
                 dist_outcomes[total_samples] = float(line)
                 total_samples += 1
     for i in range(total_samples,num_samples):
