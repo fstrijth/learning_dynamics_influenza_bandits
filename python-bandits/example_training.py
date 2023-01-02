@@ -60,7 +60,7 @@ train_agent(env,agent,num_episodes)
 opt_strategy = agent.act()
 distribution = [outcome_distribution(env,action,1000) for action in range(env.num_actions)]
 strategies = list(range(env.num_actions))
-strategies_violin_plots(strategies,distribution,opt_strategy)
+strategies_violin_plots(strategies,distribution, "Violin plot")
 
 #Examples average reward of agents
 num_bandits = 500
@@ -80,5 +80,5 @@ for _ in range(num_bandits):
     temp_rewards = train_agent(env,agent,num_episodes)
     rewards_boltzmann += train_agent(env,agent,num_episodes)/num_bandits
 
-reward_plot([rewards_greedy,rewards_UCB1,rewards_boltzmann],["epsilon-greedy","UCB1","Softmax-Boltzmann"])
+reward_plot([rewards_greedy,rewards_UCB1,rewards_boltzmann],["epsilon-greedy","UCB1","Softmax-Boltzmann"], "Rewards obtained by three agents")
 
