@@ -14,10 +14,11 @@ def upper_confidence_bound(avg:float,n_i:int,n:int,c:float):
 
 class UCB1_Agent():
     """Class that implements the UCB1 bandit with parameter c"""
-    def __init__(self,nbr_actions:int,c:float=2):
+    def __init__(self,nbr_actions:int,c:float=2,step_size=0.1):
         self.c = c
         self.total = 0 #total number of actions done so far
         self.nbr_actions = nbr_actions
+        self.step_size=0.1
         self.repeats = np.zeros(nbr_actions) #number of times each action has been done
         self.q_table = np.zeros(nbr_actions)
     def greedy_action(self):
@@ -35,9 +36,8 @@ class UCB1_Agent():
             return self.greedy_action()
     def learn(self,rew:float,action:int):
         """Adapt the estimated reward of a given action for a given reward"""
-        k = self.repeats[action]
         q_old = self.q_table[action]
-        q_new = (rew+q_old*k)/(k+1)
+        q_new = q_old+self.step_size*(rew-q_old)
         self.q_table[action] = q_new
         self.repeats[action] += 1
         self.total += 1
