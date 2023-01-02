@@ -21,7 +21,7 @@ class Epsilon_Greedy_Agent():
         use the greedy action."""
         if training:
             prob = uniform(0,1)
-            if prob < self.epsilon:
+            if prob < 1-self.epsilon:
                 return randint(0,self.nbr_actions-1)
             else:
                return self.greedy_action()

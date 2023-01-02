@@ -30,7 +30,7 @@ for r0 in ["1.3","1.4"]:
         #Plot the results of the simulations
         strategies_violin_plots(range(len(strategies)),list(outcome_distributions.values()),"Violin plot with r0="+r0+", quarantine="+quarantine)
 
-num_bandits = 10 #500
+num_bandits = 500
 num_episodes = 1000
 agent_names = ["epsilon-greedy","UCB1","Softmax-Boltzmann"]
 
