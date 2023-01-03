@@ -49,7 +49,7 @@ def optimal_strat_plot(actions:Iterable[Iterable[ndarray]],agent_names:Iterable[
     for ag in range(len(agent_names)):
         plt.plot(optimal_perc[ag])
     plt.xlabel("Iterations",fontsize=12)
-    plt.ylabel("Optimal actions (%)",fontsize=12)
+    plt.ylabel("Fraction of optimal actions",fontsize=12)
     plt.title(title)
     plt.legend(agent_names)
     plt.xticks(fontsize=12)

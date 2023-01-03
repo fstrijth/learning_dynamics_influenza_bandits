@@ -8,7 +8,7 @@ class Softmax_Boltzmann_Agent():
         self.nbr_actions = nbr_actions
         self.temperature = temperature
         self.step_size = step_size
-        self.q_table = np.zeros(nbr_actions)
+        self.q_table = np.zeros(nbr_actions)+1
     def greedy_action(self):
         """Return the action associated to the highest q-value"""
         return np.argmax(self.q_table)

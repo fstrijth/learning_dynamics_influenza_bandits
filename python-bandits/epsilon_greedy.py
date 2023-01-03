@@ -12,7 +12,7 @@ class Epsilon_Greedy_Agent():
         self.epsilon_decay = epsilon_decay
         self.step_size = step_size
         self.nbr_actions = nbr_actions
-        self.q_table = np.zeros(nbr_actions)
+        self.q_table = np.zeros(nbr_actions)+1
     def greedy_action(self):
         """Return the action associated to the highest q-value"""
         return np.argmax(self.q_table)
@@ -21,7 +21,7 @@ class Epsilon_Greedy_Agent():
         use the greedy action."""
         if training:
             prob = uniform(0,1)
-            if prob < 1-self.epsilon:
+            if prob < self.epsilon:
                 return randint(0,self.nbr_actions-1)
             else:
                return self.greedy_action()
