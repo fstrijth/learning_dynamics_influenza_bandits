@@ -28,7 +28,7 @@ for r0 in ["1.3","1.4"]:
         outcome_distributions = env.outcome_distr
 
         #Plot the results of the simulations
-        #strategies_violin_plots(range(len(strategies)),list(outcome_distributions.values()),"Violin plot with r0="+r0+", quarantine="+quarantine)
+        strategies_violin_plots(range(len(strategies)),list(outcome_distributions.values()),"Violin plot with r_0="+r0+", quarantine="+quarantine)
 
 num_bandits = 500
 num_episodes = 1000
@@ -64,6 +64,6 @@ for r0 in ["1.3","1.4"]:
             res = run_exp(agent_names[i], env)
             reward_list[i] += res[0]
             action_list[i].extend(res[1])
-        reward_plot(reward_list,agent_names,"Average rewards with r0="+r0+", quarantine="+quarantine)
-        optimal_strat_plot(action_list,agent_names,1, "Fraction of optimal action chosen with r0="+r0+", quarantine="+quarantine)
+        reward_plot(reward_list,agent_names,"Average rewards with r_0="+r0+", quarantine="+quarantine)
+        optimal_strat_plot(action_list,agent_names,1, "Fraction of optimal action chosen with r_0="+r0+", quarantine="+quarantine)
 
