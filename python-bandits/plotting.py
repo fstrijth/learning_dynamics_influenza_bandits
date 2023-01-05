@@ -17,11 +17,11 @@ def strategies_violin_plots(strategies:Iterable[int],distributions:Iterable[ndar
     plt.scatter(strategies,means,c="r",marker="D")
     plt.xlabel("Strategy",fontsize=12)
     plt.ylabel("Outcome",fontsize=12)
-    plt.title(title)
     plt.xticks(strategies,fontsize=12)
     plt.yticks(fontsize=12)
-    plt.xlim(-1,32)
+    plt.xlim(-1,len(strategies))
     plt.axhline(y=mean(distributions[opt_strategy]),c="r",linestyle="--")
+    plt.title(r"$"+title+"$")
     plt.show()
 
 def reward_plot(rewards:Iterable[ndarray],agent_names:Iterable[str],title:str):
@@ -31,10 +31,10 @@ def reward_plot(rewards:Iterable[ndarray],agent_names:Iterable[str],title:str):
         plt.plot(rewards[i])
     plt.xlabel("Iterations",fontsize=12)
     plt.ylabel("Average reward",fontsize=12)
-    plt.title(title)
     plt.legend(agent_names)
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
+    plt.title(r"$"+title+"$")
     plt.show()
 
 def optimal_strat_plot(actions:Iterable[Iterable[ndarray]],agent_names:Iterable[str],optimal_strategy:int,title:str):
@@ -49,9 +49,9 @@ def optimal_strat_plot(actions:Iterable[Iterable[ndarray]],agent_names:Iterable[
     for ag in range(len(agent_names)):
         plt.plot(optimal_perc[ag])
     plt.xlabel("Iterations",fontsize=12)
-    plt.ylabel("Fraction of optimal actions",fontsize=12)
-    plt.title(title)
+    plt.ylabel("Optimal actions (%)",fontsize=12)
     plt.legend(agent_names)
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
+    plt.title(r"$"+title+"$")
     plt.show()
