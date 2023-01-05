@@ -21,7 +21,7 @@ def strategies_violin_plots(strategies:Iterable[int],distributions:Iterable[ndar
     plt.yticks(fontsize=12)
     plt.xlim(-1,len(strategies))
     plt.axhline(y=mean(distributions[opt_strategy]),c="r",linestyle="--")
-    plt.title(r"$"+title+"$")
+    plt.title(title)
     plt.show()
 
 def reward_plot(rewards:Iterable[ndarray],agent_names:Iterable[str],title:str):
@@ -34,7 +34,7 @@ def reward_plot(rewards:Iterable[ndarray],agent_names:Iterable[str],title:str):
     plt.legend(agent_names)
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
-    plt.title(r"$"+title+"$")
+    plt.title(title)
     plt.show()
 
 def optimal_strat_plot(actions:Iterable[Iterable[ndarray]],agent_names:Iterable[str],optimal_strategy:int,title:str):
@@ -53,5 +53,5 @@ def optimal_strat_plot(actions:Iterable[Iterable[ndarray]],agent_names:Iterable[
     plt.legend(agent_names)
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
-    plt.title(r"$"+title+"$")
+    plt.title(title)
     plt.show()
