@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from typing import Iterable
-from numpy import ndarray, mean, argmin, zeros
+from numpy import ndarray, mean, argmin, zeros, var
+from math import ceil
 
 def strategies_violin_plots(strategies:Iterable[int],distributions:Iterable[ndarray],title:str):
     """strategies is a list of integers representing the predictive strategies,
@@ -54,4 +55,18 @@ def optimal_strat_plot(actions:Iterable[Iterable[ndarray]],agent_names:Iterable[
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
     plt.title(title)
+    plt.show()
+
+def variance_plot(strategies:Iterable[int],distributions:Iterable[ndarray],title:str):
+    variance_List = []
+    for strat in strategies:
+        variance_List.append(var(distributions[strat]))
+    plt.figure(figsize=(10, 6))
+    plt.bar(strategies,variance_List)
+    plt.title(title)
+    plt.xlabel("Iterations",fontsize=12)
+    plt.ylabel("Variance",fontsize=12)
+    plt.xticks(strategies,fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.xlim(-1,len(strategies))
     plt.show()
