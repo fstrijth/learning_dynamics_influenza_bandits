@@ -51,7 +51,7 @@ class Influenza_env():
         for i in range(total_samples,num_samples):
             outcome = self.run_simulation(r0,quarantine,vaccine_strategy,saving_folder,run_length,population,doses)
             self.outcome_distr[vaccine_strategy].append(outcome)
-            return self.outcome_distr
+        return self.outcome_distr
     
     def reward(self, action):
         rewards = self.outcome_distr[action]
