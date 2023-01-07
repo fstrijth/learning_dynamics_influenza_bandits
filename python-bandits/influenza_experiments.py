@@ -48,7 +48,7 @@ def run_exp(agent_name, env):
         elif agent_name == "UCB1":
             agent = UCB1_Agent(len(strategies), c = 0.001)
         elif agent_name == "Softmax-Boltzmann":
-            agent = Softmax_Boltzmann_Agent(len(strategies), 1.75)
+            agent = Softmax_Boltzmann_Agent(len(strategies), 0.01)
         res = train_agent(agent, num_episodes, strategies, env)
         reward_t += res[0]/num_bandits 
         action_t.append(res[1])
