@@ -1,5 +1,5 @@
 from influenza_env import Influenza_env
-from plotting import strategies_violin_plots, reward_plot, optimal_strat_plot
+from plotting import strategies_violin_plots, reward_plot, optimal_strat_plot, variance_plot
 from epsilon_greedy import Epsilon_Greedy_Agent
 from UCB1 import UCB1_Agent
 from softmax_boltzmann import Softmax_Boltzmann_Agent
