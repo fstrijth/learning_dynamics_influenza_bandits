@@ -14,4 +14,4 @@ FluTE can be started on its own with the pre-vaccination.sh script:
 
 
 ## Python bandits (our code)
-Our experiments can be started by running the file influenza_exp.py. It uses previously generated simulation data. Dependencies: Mako, Numpy, Matplotlib
+Our experiments can be started by running the file influenza_exp.py. It uses previously generated simulation data. Dependencies: Mako, Numpy, Matplotlib, Random, Os and Typing.
